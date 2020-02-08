@@ -4,7 +4,7 @@ Set-Location $env:userprofile\Documents\
 if (!(Test-Path $PROFILE)) {
     New-Item $PROFILE -force -itemtype "file"
 }
-
+set-executionpolicy Bypass -Scope CurrentUser -Force
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 Install-Module posh-git -Force
