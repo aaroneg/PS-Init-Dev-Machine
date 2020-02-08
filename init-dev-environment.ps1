@@ -2,7 +2,7 @@
 Set-Location $env:userprofile\Documents\
 # Make sure the powershell profile exists
 if (!(Test-Path $PROFILE)) {
-    ""|Out-File $PROFILE
+    New-Item $PROFILE -force -itemtype "file"
 }
 
 Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
