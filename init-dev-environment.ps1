@@ -14,4 +14,4 @@ install-chocolateypackage git -Force -Confirm:$false
 install-chocolateypackage vscode -Force -Confirm:$false
 Import-Module posh-git
 # Make sure posh-git is loaded every time powershell is opened
-'import-module posh-git'|out-file $PROFILE -Append
+'import-module posh-git'|out-file $PROFILE -Append -Encoding UTF8
